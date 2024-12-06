@@ -6,16 +6,16 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 
 const GLOBE_CONFIG: COBEOptions = {
-  width: 800,
-  height: 800,
+  width: 100,
+  height: 900,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
-  theta: 0.3,
+  theta: 0.2,
   dark: 0,
   diffuse: 0.4,
   mapSamples: 16000,
-  mapBrightness: 1.2,
+  mapBrightness: 1.3,
   baseColor: [2, 1, 1],
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [2, 1, 1],
