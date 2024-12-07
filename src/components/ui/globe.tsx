@@ -1,21 +1,21 @@
 "use client";
-
+ 
 import createGlobe, { COBEOptions } from "cobe";
 import { useCallback, useEffect, useRef, useState } from "react";
-
+ 
 import { cn } from "@/lib/utils";
-
+ 
 const GLOBE_CONFIG: COBEOptions = {
-  width: 100,
-  height: 900,
+  width: 300,
+  height: 3000,
   onRender: () => {},
   devicePixelRatio: 2,
-  phi: 0,
-  theta: 0.2,
-  dark: 0,
-  diffuse: 0.4,
+  phi: 2,
+  theta: 0.3,
+  dark: 0.9,
+  diffuse: 0,
   mapSamples: 16000,
-  mapBrightness: 1.3,
+  mapBrightness: 5,
   baseColor: [2, 1, 1],
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [2, 1, 1],
@@ -32,8 +32,8 @@ const GLOBE_CONFIG: COBEOptions = {
     { location: [41.0082, 28.9784], size: 0.06 },
   ],
 };
-
-export default function Globe({
+ 
+export function Globe({
   className,
   config = GLOBE_CONFIG,
 }: {
@@ -46,14 +46,14 @@ export default function Globe({
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);
   const [r, setR] = useState(0);
-
+ 
   const updatePointerInteraction = (value: any) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value ? "grabbing" : "grab";
     }
   };
-
+ 
   const updateMovement = (clientX: any) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
@@ -61,7 +61,7 @@ export default function Globe({
       setR(delta / 200);
     }
   };
-
+ 
   const onRender = useCallback(
     (state: Record<string, any>) => {
       if (!pointerInteracting.current) phi += 0.005;
@@ -71,32 +71,32 @@ export default function Globe({
     },
     [r],
   );
-
+ 
   const onResize = () => {
     if (canvasRef.current) {
       width = canvasRef.current.offsetWidth;
     }
   };
-
+ 
   useEffect(() => {
     window.addEventListener("resize", onResize);
     onResize();
-
+ 
     const globe = createGlobe(canvasRef.current!, {
       ...config,
       width: width * 2,
       height: width * 2,
       onRender,
     });
-
+ 
     setTimeout(() => (canvasRef.current!.style.opacity = "1"));
     return () => globe.destroy();
   }, []);
-
+ 
   return (
     <div
       className={cn(
-        " inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
         className,
       )}
     >
