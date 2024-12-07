@@ -7,14 +7,14 @@ import { cn } from "@/lib/utils";
  
 const GLOBE_CONFIG: COBEOptions = {
   width: 300,
-  height: 3000,
+  height: 100,
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 2,
-  theta: 0.3,
-  dark: 0.9,
+  theta: 0.2,
+  dark: 0.8,
   diffuse: 0,
-  mapSamples: 16000,
+  mapSamples: 60000,
   mapBrightness: 5,
   baseColor: [2, 1, 1],
   markerColor: [251 / 255, 100 / 255, 21 / 255],
@@ -96,7 +96,7 @@ export function Globe({
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        "relative inset-0 mx-auto aspect-[1/1] w-full max-w-[1000px] ",
         className,
       )}
     >

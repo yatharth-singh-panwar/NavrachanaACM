@@ -14,11 +14,11 @@ export interface DockProps extends VariantProps<typeof dockVariants> {
   children: React.ReactNode;
 }
 
-const DEFAULT_MAGNIFICATION = 60;
+const DEFAULT_MAGNIFICATION = 0;
 const DEFAULT_DISTANCE = 140;
 
 const dockVariants = cva(
-  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-2 rounded-2xl border p-2 backdrop-blur-md",
+  "supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max gap-5 rounded-2xl border p-2 backdrop-blur-md",
 );
 
 const Dock = React.forwardRef<HTMLDivElement, DockProps>(
@@ -99,7 +99,7 @@ const DockIcon = ({
   const widthSync = useTransform(
     distanceCalc,
     [-distance, 0, distance],
-    [40, magnification, 40],
+    [60, magnification, 40],
   );
 
   const width = useSpring(widthSync, {
@@ -111,7 +111,7 @@ const DockIcon = ({
   return (
     <motion.div
       ref={ref}
-      style={{ width }}
+      style={{ width}}
       className={cn(
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
         className,
