@@ -11,11 +11,12 @@ function Navbar() {
             <div><Home/></div>
             <div>Home</div>
           </a>
-          <a className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-sm">
+          <a href="/Team" className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-sm">
             <div><Users/></div>
             <div>The Team</div>
+            
           </a>
-          <a className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-sm">
+          <a href="/Events" className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-sm">
             <div><Calendar/></div>
             <div>Events</div>
           </a>

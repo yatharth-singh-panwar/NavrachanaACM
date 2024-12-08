@@ -9,8 +9,11 @@ export default {
     ],
     theme: {
     	extend: {
+    		fontWeight: {
+    			'mega-bold': '900'
+    		},
     		fontFamily: {
-    			league: ['League Gothic"', 'sans-serif']
+    			league: ['League Gothic', 'sans-serif']
     		},
     		borderRadius: {
     			lg: 'var(--radius)',
@@ -60,7 +63,9 @@ export default {
     			}
     		},
     		animation: {
-    			meteor: 'meteor 5s linear infinite'
+    			meteor: 'meteor 5s linear infinite',
+    			shine: 'shine var(--duration) infinite linear',
+    			'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear'
     		},
     		keyframes: {
     			meteor: {
@@ -74,6 +79,22 @@ export default {
     				'100%': {
     					transform: 'rotate(215deg) translateX(-500px)',
     					opacity: '0'
+    				}
+    			},
+    			shine: {
+    				'0%': {
+    					'background-position': '0% 0%'
+    				},
+    				'50%': {
+    					'background-position': '100% 100%'
+    				},
+    				to: {
+    					'background-position': '0% 0%'
+    				}
+    			},
+    			'border-beam': {
+    				'100%': {
+    					'offset-distance': '100%'
     				}
     			}
     		}
