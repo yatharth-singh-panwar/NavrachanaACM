@@ -28,11 +28,11 @@ export function Landing() {
           className=""
         />
       </div>
-      <div className="z-10 flex justify-center">
+      <div className="z-10 flex justify-end">
         <Navbar />
       </div>
       <div>
-        <div className="mt-16 flex w-full items-center justify-center pb-20">
+        <div className="flex w-full items-center justify-center pb-20">
           <div className="-z-20 w-full top-0  min-h-64 items-center justify-center ">
             <div className="text-center text-white font-extrabold text-5xl font-aleo">
               Welcome To

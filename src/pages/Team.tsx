@@ -6,6 +6,8 @@ import Travon from "@/icons/Travon.jpeg";
 import Dharminf from "@/icons/dharminFinal.png";
 import Ray from "@/icons/RayFinal.png";
 import Amaan from "@/icons/Amaan-removebg-preview.png";
+import Jaideep from "@/icons/JaideepRaulji.png";
+import ashish from "@/icons/AshishJani.png"
 import { Footer } from "@/components/Footer";
 export function Team() {
   return (
@@ -25,7 +27,7 @@ export function Team() {
       </div>
       <div className="flex flex-wrap w-full gap-10 justify-center">
         <MemberInfo
-          name="Ujwala Petigara"
+          name="Ms. Ujwala Petigara"
           position="Faculty Sponsor"
           linkedInProfileUrl="https://www.linkedin.com/in/ujwala-petigara-8ba29725a/?originalSubdomain=in"
           TwitterProfileUrl=""
@@ -33,15 +35,23 @@ export function Team() {
         />
         
         <MemberInfo
-          name="Jaideep Raulji"
+          name="Dr. Jaideep Raulji"
           position="Faculty Sponsor"
-          linkedInProfileUrl="https://www.linkedin.com/in/ujwala-petigara-8ba29725a/?originalSubdomain=in"
+          linkedInProfileUrl="https://www.linkedin.com/in/jaideepsinhraulji/?originalSubdomain=in"
           TwitterProfileUrl=""
-          imageUrl="https://nuv.ac.in/wp-content/uploads/46.png"
+          imageUrl={Jaideep}
         />
 
         <MemberInfo
-          name="Travon"
+          name="Ashish Jani"
+          position="Faculty Sponsor"
+          linkedInProfileUrl="https://www.linkedin.com/in/ashish-jani/"
+          TwitterProfileUrl=""
+          imageUrl={ashish}
+        />
+
+        <MemberInfo
+          name="Travon Bhagat"
           position="Chair"
           linkedInProfileUrl="https://www.linkedin.com/in/travon-bhagat"
           TwitterProfileUrl="https://x.com/TravonBhagat?t=YJ15G5hhPILMpmsu-qaZUQ&s=09"
@@ -62,9 +72,10 @@ export function Team() {
           imageUrl={Amaan}
         />
         <MemberInfo
-          name="Ray"
-          position="Web Master"
-          TwitterProfileUrl="https://x.com/yatharthpnwr"
+          name="Hir Ray"
+          position="Secretary"
+          TwitterProfileUrl=""
+          linkedInProfileUrl="https://www.linkedin.com/in/hir-ray-7953a0286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           imageUrl={Ray}
         />
         <MemberInfo
