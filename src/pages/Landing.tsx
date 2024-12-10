@@ -11,6 +11,7 @@ import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 import TypingAnimation from "@/components/ui/typing-animation";
 import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
+import BoxReveal from "@/components/ui/box-reveal";
 
 export function Landing() {
 
@@ -51,9 +52,15 @@ export function Landing() {
               </div>
               <div className="w-full flex items-center justify-center mt-8">
                 <div className="text-gray-200 flex items-center max-w-3xl text-justify" >
-                  <p className="pt-5 pr-12 text-2xl">
-                    The <strong>Association for Computing Machinery (ACM)</strong> is a global organization dedicated to advancing computing as a science and profession. With over 100,000 members worldwide, ACM brings together educators, researchers, and professionals to address the challenges and opportunities in computing. The Navrachana University ACM Chapter joins this vast network, creating a platform for students and faculty to connect, learn, and contribute to the ever-evolving field of technology.
-                  </p>
+                  <div className="size-full max-w-full items-center justify-center overflow-hidden pt-8">
+                   
+                      <p className="text-2xl">
+                        The <strong>Association for Computing Machinery (ACM)</strong> is a global organization dedicated to advancing computing as a science and profession. With over 100,000 members worldwide, ACM brings together educators, researchers, and professionals to address the challenges and opportunities in computing. The Navrachana University ACM Chapter joins this vast network, creating a platform for students and faculty to connect, learn, and contribute to the ever-evolving field of technology.
+                      </p>
+                      
+                  </div>
+
+                  
                 </div>
                 <div className="text-white flex flex-col gap-5 w-[500px] items-center justify-center mx-0 px-0">
                   <div className="flex gap-5">
@@ -63,7 +70,6 @@ export function Landing() {
                   </div>
                   <div className="text-3xl font-extrabold tracking-tighter text-gray-200">COUNTRIES</div>
                 </div>
-                
               </div>
               <div className="h-28"></div>
 

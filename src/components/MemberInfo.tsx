@@ -15,8 +15,8 @@ export function MemberInfo(props: information) {
         <div className="w-72 h-[400px]" onMouseEnter = {()=>{updateMouse(true)}} onMouseLeave={()=>{updateMouse(false)}}>
             <MagicCard className="flex justify-center p-5" children={
                 <div >
-                    <div className = {`max-w-3/4 h-[250px] image  rounded-lg ${mouse ? "transform-gpu scale-95 duration-300" : ""}`}>
-                        <img className="rounded-lg" src={props.imageUrl}/>
+                    <div className = {`max-w-3/4 h-[250px] image overflow-hidden rounded-lg ${mouse ? "transform-gpu scale-95 duration-300" : ""}`}>
+                        <img className="rounded-lg " src={props.imageUrl}/>
                     </div>
                     <div className="text-center font-extrabold text-xl mt-2"><p>{props.name}</p></div>
                     <div className="text-center mb-2"><p>{props.position}</p></div>
