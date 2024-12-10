@@ -31,6 +31,15 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl="https://nuv.ac.in/wp-content/uploads/Ujwala-Petigara.png"
         />
+        
+        <MemberInfo
+          name="Jaideep Raulji"
+          position="Faculty Sponsor"
+          linkedInProfileUrl="https://www.linkedin.com/in/ujwala-petigara-8ba29725a/?originalSubdomain=in"
+          TwitterProfileUrl=""
+          imageUrl="https://nuv.ac.in/wp-content/uploads/46.png"
+        />
+
         <MemberInfo
           name="Travon"
           position="Chair"
