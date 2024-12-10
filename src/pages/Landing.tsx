@@ -74,7 +74,7 @@ export function Landing() {
               <div className="h-28"></div>
 
               <div className="w-full flex items-center justify-center">
-                <TypingAnimation text="Our Vision & Mission" className="text-white font-bold text-6xl "/>
+                <BlurredInComponent word="Our Vision & Mission"/>
               </div>
               <div className="w-full flex items-center justify-center mt-8">
                 <div className="text-white flex w-[500px] items-center justify-center mx-0 px-0">
