@@ -19,14 +19,14 @@ interface AnimatedGridPatternProps {
 }
 
 export default function AnimatedGridPattern({
-  width = 200,
-  height = 200,
+  width = 50,
+  height = 50,
   x = -1,
   y = -1,
   strokeDasharray = 0,
   numSquares = 5,
   className,
-  maxOpacity = 0.5,
+  maxOpacity = 0.2,
   duration = 2,
   repeatDelay = 0.1,
   ...props

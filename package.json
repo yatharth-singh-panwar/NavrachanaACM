@@ -12,10 +12,12 @@
   "dependencies": {
     "@react-three/drei": "^9.120.1",
     "@react-three/fiber": "^8.17.10",
+    "@types/canvas-confetti": "^1.6.4",
+    "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cobe": "^0.6.3",
-    "framer-motion": "^11.13.1",
+    "framer-motion": "^11.13.5",
     "lucide-react": "^0.465.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -24,7 +26,8 @@
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.171.0",
-    "three-globe": "^2.35.3"
+    "three-globe": "^2.35.3",
+    "websocket": "^1.0.35"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",

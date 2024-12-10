@@ -9,7 +9,7 @@ export function Team(){
                 <AnimatedGridPattern repeatDelay={2} />
             </div>
             <div className="z-10 flex justify-end">
-                <Navbar/>
+                <Navbar />
             </div>
             <div className="w-full text-center text-white p-10">
                 <WordFadeIn words="MEET THE BRAINS" className="text-white" delay={0.7}/>

@@ -13,7 +13,7 @@ interface BlurIntProps {
   };
   duration?: number;
 }
-const BlurIn = ({ word, className, variant, duration = 2.5 }: BlurIntProps) => {
+const BlurIn = ({ word, className, variant, duration = 0.8 }: BlurIntProps) => {
   const defaultVariants = {
     hidden: { filter: "blur(10px)", opacity: 0 },
     visible: { filter: "blur(0px)", opacity: 1 },
