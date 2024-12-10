@@ -13,10 +13,10 @@ export function Team() {
       <div className="fixed w-full z-2 h-screen">
         <AnimatedGridPattern repeatDelay={2} />
       </div>
-      <div className="z-10 flex justify-end">
+      <div className="z-10 flex justify-center">
         <Navbar />
       </div>
-      <div className="w-full flex text-left text-white p-10">
+      <div className="w-full flex justify-center text-white p-10">
         <WordFadeIn
           words="MEET THE BRAINS"
           className="text-white"
