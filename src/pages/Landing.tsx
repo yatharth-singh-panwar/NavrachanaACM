@@ -28,7 +28,7 @@ export function Landing() {
           className=""
         />
       </div>
-      <div className="z-10 flex justify-end">
+      <div className="z-10 flex justify-center">
         <Navbar />
       </div>
       <div>
