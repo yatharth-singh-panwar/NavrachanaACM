@@ -11,7 +11,6 @@ import ashish from "@/icons/AshishJani.png";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/LogoFinal.jpeg";
 import yatharth from "@/icons/yatharthFinal2.png";
-import Meteors from "@/components/ui/meteors";
 export function Team() {
   return (
     <div>

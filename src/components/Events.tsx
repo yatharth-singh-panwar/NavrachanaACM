@@ -1,10 +1,7 @@
 import Navbar from "./Navbar";
 import AnimatedGridPattern from "./ui/animated-grid-pattern";
-import Meteors from "./ui/meteors";
 import logo from "@/assets/LogoFinal.jpeg";
 import WordPullUp from "./ui/word-pull-up";
-import SparklesText from "./ui/sparkles-text";
-import BlurredInComponent from "./BlurIn";
 import { Footer } from "./Footer";
 
 export default function Events() {
