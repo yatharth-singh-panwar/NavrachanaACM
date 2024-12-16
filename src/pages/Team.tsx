@@ -9,7 +9,7 @@ import Amaan from "@/icons/Amaan-removebg-preview.png";
 import Jaideep from "@/icons/JaideepRaulji.png";
 import ashish from "@/icons/AshishJani.png";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/LogoFinal.jpeg";
+import logo from "@/assets/LOGOFINAL.png";
 import yatharth from "@/icons/yatharthFinal2.png";
 export function Team() {
   return (
@@ -25,11 +25,11 @@ export function Team() {
       </div>
       <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
-          <img
-            className="bg-black rounded-2xl"
+          <img 
+            className="rounded-2xl"
             src={logo}
-            height={100}
-            width={150}
+            height={400}
+            width={500}
           />
         </div>
         <Navbar />

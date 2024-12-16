@@ -1,5 +1,5 @@
 import "./App.css";
-import Events from "./components/Events";
+import Events from "../src/pages/Events";
 import { Landing } from "./pages/Landing";
 import { Team } from "./pages/Team";
 import { BrowserRouter, Routes, Route } from "react-router-dom";

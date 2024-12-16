@@ -10,7 +10,7 @@ import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/LogoFinal.jpeg";
+import logo from "@/assets/LOGOFINAL.png";
 
 export function Landing() {
   return (
@@ -29,11 +29,11 @@ export function Landing() {
       </div>
       <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
-          <img
-            className="bg-black rounded-2xl"
+          <img 
+            className="rounded-2xl"
             src={logo}
-            height={100}
-            width={150}
+            height={400}
+            width={500}
           />
         </div>
         <Navbar />

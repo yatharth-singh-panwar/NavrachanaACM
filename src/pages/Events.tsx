@@ -1,8 +1,8 @@
-import Navbar from "./Navbar";
-import AnimatedGridPattern from "./ui/animated-grid-pattern";
-import logo from "@/assets/LogoFinal.jpeg";
-import WordPullUp from "./ui/word-pull-up";
-import { Footer } from "./Footer";
+import Navbar from "../components/Navbar";
+import AnimatedGridPattern from "../components/ui/animated-grid-pattern";
+import logo from "@/assets/LOGOFINAL.png";
+import WordPullUp from "../components/ui/word-pull-up";
+import { Footer } from "../components/Footer";
 
 export default function Events() {
   return (
@@ -18,11 +18,11 @@ export default function Events() {
       </div>
       <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
-          <img
-            className="bg-black rounded-2xl"
+          <img 
+            className="rounded-2xl"
             src={logo}
-            height={100}
-            width={150}
+            height={400}
+            width={500}
           />
         </div>
         <Navbar />
