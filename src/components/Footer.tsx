@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <div>
       <hr className="mt-5 border-dashed border-red-900" />
-      <div className="relative footer text-white p-10 flex flex-col items-center">
+      <div className="relative footer text-white p-10 flex flex-col items-center font-aleo">
         {/* // TODO: Add logo here  */}
         {/* <BlurIn className="logo text-4xl" word="NUV x ACM" /> */}
         <FlickeringGrid
