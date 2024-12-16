@@ -23,7 +23,7 @@ export function Team() {
           className=""
         />
       </div>
-      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
+      <div className="z-50 flex items-center justify-between h-24 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
           <img 
             className="rounded-2xl"
@@ -49,23 +49,6 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl="https://nuv.ac.in/wp-content/uploads/Ujwala-Petigara.png"
         />
-
-        <MemberInfo
-          name="Dr. Jaideep Raulji"
-          position="Faculty Sponsor"
-          linkedInProfileUrl="https://www.linkedin.com/in/jaideepsinhraulji/?originalSubdomain=in"
-          TwitterProfileUrl=""
-          imageUrl={Jaideep}
-        />
-
-        <MemberInfo
-          name="Ashish Jani"
-          position="Faculty Sponsor"
-          linkedInProfileUrl="https://www.linkedin.com/in/ashish-jani/"
-          TwitterProfileUrl=""
-          imageUrl={ashish}
-        />
-
         <MemberInfo
           name="Travon Bhagat"
           position="Chair"
@@ -101,6 +84,23 @@ export function Team() {
           TwitterProfileUrl="https://x.com/yatharthpnwr"
           imageUrl={yatharth}
         />
+
+        <MemberInfo
+          name="Dr. Jaideep Raulji"
+          position="Faculty Sponsor"
+          linkedInProfileUrl="https://www.linkedin.com/in/jaideepsinhraulji/?originalSubdomain=in"
+          TwitterProfileUrl=""
+          imageUrl={Jaideep}
+        />
+
+        <MemberInfo
+          name="Ashish Jani"
+          position="Faculty Sponsor"
+          linkedInProfileUrl="https://www.linkedin.com/in/ashish-jani/"
+          TwitterProfileUrl=""
+          imageUrl={ashish}
+        />
+
       </div>
 
       <Footer />

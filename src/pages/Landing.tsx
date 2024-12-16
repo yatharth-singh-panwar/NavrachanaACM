@@ -27,7 +27,7 @@ export function Landing() {
           className=""
         />
       </div>
-      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
+      <div className="z-50 m-0 flex items-center justify-between h-24 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
           <img 
             className="rounded-2xl"
