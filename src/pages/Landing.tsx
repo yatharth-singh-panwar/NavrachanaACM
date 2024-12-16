@@ -49,7 +49,7 @@ export function Landing() {
               className="text-center text-red-600 font-mega-bold text-9xl p-2 font-aleo"
             />
             <SparklesText
-              className="absolute -z-30 top-[100px] left-[365px] pl-40 text-center text-transparent font-mega-bold text-9xl p-2 font-aleo"
+              className="z-50 font-bold w-full absolute top-48 text-center text-transparent text-8xl p-2 font-aleo"
               text="NUV x ACM"
             />
             <div className="ml-[300px] text-center text-white font-extrabold text-4xl pb-0 font-aleo w-3/4">

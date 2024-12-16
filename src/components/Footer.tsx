@@ -9,7 +9,7 @@ export function Footer() {
       <hr className="mt-5 border-dashed border-red-900" />
       <div className="relative footer text-white p-10 flex flex-col items-center font-aleo">
         {/* // TODO: Add logo here  */}
-        {/* <BlurIn className="logo text-4xl" word="NUV x ACM" /> */}
+        {/* <BlurIn className="logo text-4xl" word="NUV ACM" /> */}
         <FlickeringGrid
           className="z-0 absolute inset-0 size-full bg-black"
           squareSize={4}
