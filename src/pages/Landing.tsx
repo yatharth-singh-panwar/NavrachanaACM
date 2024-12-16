@@ -11,7 +11,7 @@ import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
 import BoxReveal from "@/components/ui/box-reveal";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/LogoFinal.jpeg"
+import logo from "@/assets/LogoFinal.jpeg";
 
 export function Landing() {
   return (
@@ -28,9 +28,14 @@ export function Landing() {
           className=""
         />
       </div>
-      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60">
+      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
-          <img className="bg-black rounded-2xl" src={logo} height={100} width={150}/>
+          <img
+            className="bg-black rounded-2xl"
+            src={logo}
+            height={100}
+            width={150}
+          />
         </div>
         <Navbar />
       </div>
@@ -41,7 +46,7 @@ export function Landing() {
               Welcome To
             </div>
             <WordPullUp
-              words="NUV x ACM"
+              words="NUV ACM"
               className="text-center text-red-600 font-mega-bold text-9xl p-2 font-aleo"
             />
             <SparklesText
@@ -49,7 +54,11 @@ export function Landing() {
               text="NUV x ACM"
             />
             <div className="ml-[300px] text-center text-white font-extrabold text-4xl pb-0 font-aleo w-3/4">
-              <VelocityScroll text="Student Chapter" className="text-white" />
+              <VelocityScroll
+                text="Student Chapter"
+                default_velocity={1}
+                className="text-white"
+              />
             </div>
             <div className="z-50 items-center w-full max max-h-[500px] overflow-hidden">
               <Globe />
