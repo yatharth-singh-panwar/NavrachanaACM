@@ -4,7 +4,7 @@ import { Calendar } from "lucide-react";
 
 function Navbar() {
   return (
-    <nav className="z-50 text-white w-96 mt-11 flex justify-center items-center">
+    <nav className="z-50 text-white w-96 flex justify-center items-center">
       <div className="backdrop-blur-sm container mx-auto h-20 flex justify-between items-center border border-slate-300 rounded-full">
         <nav className="flex space-x-4 w-full justify-center gap-0">
           <a

@@ -7,11 +7,11 @@ import { AnimatedBeamDemo } from "@/components/About";
 import WordPullUp from "@/components/ui/word-pull-up";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
-import TypingAnimation from "@/components/ui/typing-animation";
 import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
 import BoxReveal from "@/components/ui/box-reveal";
 import { Footer } from "@/components/Footer";
+import logo from "@/assets/LogoFinal.jpeg"
 
 export function Landing() {
   return (
@@ -28,7 +28,10 @@ export function Landing() {
           className=""
         />
       </div>
-      <div className="z-10 flex justify-end">
+      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60">
+        <div className="logo bg-black">
+          <img className="bg-black rounded-2xl" src={logo} height={100} width={150}/>
+        </div>
         <Navbar />
       </div>
       <div>

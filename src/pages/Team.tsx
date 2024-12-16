@@ -9,13 +9,18 @@ import Amaan from "@/icons/Amaan-removebg-preview.png";
 import Jaideep from "@/icons/JaideepRaulji.png";
 import ashish from "@/icons/AshishJani.png"
 import { Footer } from "@/components/Footer";
+import logo from "@/assets/LogoFinal.jpeg"
+import yatharth from "@/icons/yatharthFinal2.png";
 export function Team() {
   return (
     <div>
       <div className="fixed w-full z-2 h-screen">
         <AnimatedGridPattern repeatDelay={2} />
       </div>
-      <div className="z-10 flex justify-center">
+      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-100">
+        <div className="logo bg-black">
+          <img className="bg-black rounded-2xl" src={logo} height={100} width={150}/>
+        </div>
         <Navbar />
       </div>
       <div className="w-full flex justify-center text-white p-10">
@@ -83,7 +88,7 @@ export function Team() {
           position="Web Master"
           linkedInProfileUrl="https://www.linkedin.com/in/yatharth-singh-panwar-153058288/"
           TwitterProfileUrl="https://x.com/yatharthpnwr"
-          imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToonwNT4zbwCyq-k-qAzXexPn6URz3gT4BxQ&s"
+          imageUrl={yatharth}
         />
       </div>
 
