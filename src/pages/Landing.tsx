@@ -9,7 +9,6 @@ import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import { VelocityScroll } from "@/components/ui/scroll-based-velocity";
 import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
-import BoxReveal from "@/components/ui/box-reveal";
 import { Footer } from "@/components/Footer";
 import logo from "@/assets/LogoFinal.jpeg";
 

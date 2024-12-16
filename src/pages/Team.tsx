@@ -7,19 +7,30 @@ import Dharminf from "@/icons/dharminFinal.png";
 import Ray from "@/icons/RayFinal.png";
 import Amaan from "@/icons/Amaan-removebg-preview.png";
 import Jaideep from "@/icons/JaideepRaulji.png";
-import ashish from "@/icons/AshishJani.png"
+import ashish from "@/icons/AshishJani.png";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/LogoFinal.jpeg"
+import logo from "@/assets/LogoFinal.jpeg";
 import yatharth from "@/icons/yatharthFinal2.png";
 export function Team() {
   return (
     <div>
-      <div className="fixed w-full z-2 h-screen">
-        <AnimatedGridPattern repeatDelay={2} />
+      <div className="absolute -z-30 w-full h-[910px]">
+        <AnimatedGridPattern
+          repeatDelay={2}
+          width={100}
+          height={100}
+          numSquares={5}
+          className=""
+        />
       </div>
-      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-100">
+      <div className="z-50 flex items-center justify-between h-24 m-2 bg-black bg-opacity-60 mb-10">
         <div className="logo bg-black">
-          <img className="bg-black rounded-2xl" src={logo} height={100} width={150}/>
+          <img
+            className="bg-black rounded-2xl"
+            src={logo}
+            height={100}
+            width={150}
+          />
         </div>
         <Navbar />
       </div>
@@ -38,7 +49,7 @@ export function Team() {
           TwitterProfileUrl=""
           imageUrl="https://nuv.ac.in/wp-content/uploads/Ujwala-Petigara.png"
         />
-        
+
         <MemberInfo
           name="Dr. Jaideep Raulji"
           position="Faculty Sponsor"
