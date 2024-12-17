@@ -57,18 +57,18 @@ export function Team() {
           imageUrl={Travon}
         />
         <MemberInfo
-          name="Dharmin Nagar"
-          position="Treasurer"
-          linkedInProfileUrl="https://www.linkedin.com/in/nagardharmin/"
-          TwitterProfileUrl="https://x.com/dharminnagar"
-          imageUrl={Dharminf}
-        />
-        <MemberInfo
           name="Amaan Surti"
           position="Co Chair"
           linkedInProfileUrl="https://www.linkedin.com/in/amaan-surti-14b072206?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           TwitterProfileUrl="https://x.com/Amaan7399"
           imageUrl={Amaan}
+        />
+        <MemberInfo
+          name="Dharmin Nagar"
+          position="Treasurer"
+          linkedInProfileUrl="https://www.linkedin.com/in/nagardharmin/"
+          TwitterProfileUrl="https://x.com/dharminnagar"
+          imageUrl={Dharminf}
         />
         <MemberInfo
           name="Hir Ray"
