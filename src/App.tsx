@@ -3,6 +3,8 @@ import Events from "../src/pages/Events";
 import { Landing } from "./pages/Landing";
 import { Team } from "./pages/Team";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Admin/Login";
+import Dashboard from "./pages/Admin/Dashboard";
 function App() {
   return (
     <>
@@ -11,6 +13,8 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="Team" element={<Team />} />
           <Route path="Events" element={<Events />} />
+          <Route path="admin/login" element={<Login/>}/>
+          <Route path="admin/dashboard" element={<Dashboard/>}/>
         </Routes>
       </BrowserRouter>
     </>
