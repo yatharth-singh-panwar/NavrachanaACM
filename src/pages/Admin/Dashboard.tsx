@@ -18,21 +18,19 @@ export default function Dashboard(){
         <>
         <Modal open={model} onClose = { ()=>{setModel(false)} }/>
         <div className="bg-white w-full h-screen">
-            <EventDetails isAdmin={true} Heading={"Event heading"} Description={"Get your bags ready for an ultimate experiecne with the devs. Make the best out of the "}/>
+            
             <div className='flex row'>
             <div className='w-full p-6'>
                 <div className='bg-[#F8FBFD]'>
                 <div className='flex justify-between p-2' >
                     <h1 className='text-xl font-bold content-center'>Welcome Admin</h1>
                     <div className='flex justify-end gap-5 content-center'>
-                    <Button startIcon={<Trash2 size={20}/>} variant="primary" size="sm" text= "Delete Event" ></Button>
-                    <Button startIcon={<Edit2 size={20}/>} variant="primary" size="sm" text= "Edit Event" ></Button>
-
                     <Button startIcon={<PlusIcon/>} variant="primary" size="md" text= "Add new Event" onClick={ ()=>{setModel(true)} }></Button>
                     </div>
                 </div>
                 <div className='content flex flex-wrap'> 
                 </div>
+                <EventDetails isAdmin={true} Heading={"Event heading"} Description={"Get your bags ready for an ultimate experiecne with the devs. Make the best out of the "}/>
                 </div>
             </div>
             </div>

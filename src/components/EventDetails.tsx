@@ -1,12 +1,13 @@
 import { MagicCard } from "./ui/magic-card"
 import { Button } from "@/components/Button"
-import { Edit2, Heading, Trash2 } from "lucide-react"
+import { Edit2,  Trash2 } from "lucide-react"
 
 interface EventDetailsProps{
     isAdmin: Boolean;
     Heading: String;
     Description: String;
     formLink ?: String;
+    
 }
 export const EventDetails = (props: EventDetailsProps)=>{
     return(
@@ -21,8 +22,8 @@ export const EventDetails = (props: EventDetailsProps)=>{
                         <p>{props.Description}</p> 
                     </div>
                     {props.isAdmin && <div className="flex justify-between">
-                        <Button startIcon={<Trash2 size={20}/>} variant="secondary" size="sm" text= "Delete Event" ></Button>
-                        <Button startIcon={<Edit2 size={20}/>} variant="secondary" size="sm" text= "Edit Event" ></Button>
+                        <Button startIcon={<Trash2 size={17}/>} variant="secondary" size="sm" text= "Delete Event" ></Button>
+                        <Button startIcon={<Edit2 size={20}/>} variant="tertiary" size="sm" text= "Edit Event" ></Button>
                     </div>}
                     {
                         !props.isAdmin &&

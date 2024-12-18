@@ -7,7 +7,7 @@ interface propsType{
 export const Modal  = ({open, onClose}: propsType)=>{
     return <>
         {open && 
-        <div className="w-screen h-screen bg-black bg-opacity-80 fixed">
+        <div className="w-screen h-screen bg-black bg-opacity-90 fixed">
               <div className="h-screen flex items-center justify-center ">
                 <div className="p-2 flex flex-col gap-2 items-center h-68 rounded-lg w-96 bg-white-400 opacity-100 bg-white">
                     <div className="w-full flex items-end justify-end cursor-pointer" onClick={onClose}><CloseButton/></div>
