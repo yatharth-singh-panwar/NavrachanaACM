@@ -70,6 +70,8 @@ export default function Dashboard() {
                       isAdmin={true}
                       Heading={event.name}
                       Description={event.desc}
+                      events={events}
+                      setEvents={setEvents}
                     />
                   );
                 })}

@@ -2,23 +2,34 @@ import { MagicCard } from "./ui/magic-card";
 import { Button } from "@/components/Button";
 import { Edit2, Trash2 } from "lucide-react";
 import axios from "axios";
+import { BACKEND_URL } from "../../config";
 
 interface EventDetailsProps {
   isAdmin: Boolean;
   Heading: String;
   Description: String;
   formLink?: String;
+  events: any;
+  setEvents: (e: any) => void;
 }
 export const EventDetails = (props: EventDetailsProps) => {
   async function deleteEvent() {
     try {
-      await axios.delete("http://localhost:3000/admin/dashboard/Event/", {
+      const res = await axios.delete(`${BACKEND_URL}admin/dashboard/Event/`, {
         data: {
           name: props.Heading,
         },
       });
 
-      console.log("Event Deleted successfully");
+      props.setEvents(
+        props.events.filter((e: any) => {
+          return e.name !== props.Heading;
+        })
+      );
+
+      if (res.status === 200) {
+        console.log("Event Deleted successfully");
+      }
     } catch (e) {
       console.log("Error occured while trying to remove event");
       console.log(e);
