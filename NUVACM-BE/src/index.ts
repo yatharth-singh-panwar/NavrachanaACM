@@ -83,9 +83,9 @@ app.post("/admin/dashboard/Event", async (req, res) => {
 
 //delete event
 app.delete("/admin/dashboard/Event", async (req, res) => {
-  const id = req.body.id;
+  const name = req.body.name;
   try {
-    await EventModel.deleteOne({ _id: id });
+    await EventModel.deleteOne({ name: name });
     res.status(200).send({
       msg: "Event Deleted successfully",
     });
