@@ -9,14 +9,14 @@ import axios from "axios";
 
 export default function Dashboard() {
   const [model, setModel] = useState(false);
-  let events: any = [];
+  const [events, setEvents] = useState([]);
 
   async function getEvents() {
     try {
       const response = await axios.get(`${BACKEND_URL}admin/dashboard/Event/`);
 
       if (response.status === 200) {
-        events = response.data.allEvents;
+        setEvents(response.data.allEvents);
         console.log(events);
       } else {
         console.log("Error occured while trying to fetch events");
@@ -31,7 +31,7 @@ export default function Dashboard() {
     getEvents();
 
     return () => {
-      events = [];
+      setEvents([]);
     };
   }, []);
 
@@ -63,17 +63,17 @@ export default function Dashboard() {
                   ></Button>
                 </div>
               </div>
-              <div className="content flex flex-wrap"></div>
-
-              {events.map((event: any) => {
-                return (
-                  <EventDetails
-                    isAdmin={true}
-                    Heading={event.name}
-                    Description={event.desc}
-                  />
-                );
-              })}
+              <div className="content flex">
+                {events.map((event: any) => {
+                  return (
+                    <EventDetails
+                      isAdmin={true}
+                      Heading={event.name}
+                      Description={event.desc}
+                    />
+                  );
+                })}
+              </div>
               {/* <EventDetails
                 isAdmin={true}
                 Heading={"Event heading"}
