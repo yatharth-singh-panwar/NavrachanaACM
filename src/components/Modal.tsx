@@ -78,14 +78,17 @@ export const Modal = ({ open, isEdit, eventId, onClose }: propsType) => {
   return (
     <>
       {open && (
-        <div className="w-screen h-screen bg-black bg-opacity-90 fixed z-50">
-          <div className="h-screen flex items-center justify-center ">
-            <div className="p-2 flex flex-col gap-2 items-center h-68 rounded-lg w-96 bg-white-400 opacity-100 bg-white">
+        <div className="w-screen h-screen absolute top-0 left-0 bg-black bg-opacity-90 z-50 font-aleo">
+          <div className="h-screen flex items-center justify-center">
+            <div className="p-2 flex flex-col gap-2 items-center h-68 rounded-lg w-96 bg-white-400 opacity-100 bg-gray-100 text-black z-60">
               <div
-                className="w-full flex items-end justify-end cursor-pointer"
+                className="w-full flex items-end justify-end cursor-pointer pl-10"
                 onClick={onClose}
               >
                 <CloseButton />
+              </div>
+              <div className="text-2xl font-bold text-center">
+                {isEdit ? "Edit Event" : "Add Event"}
               </div>
               <p className="font-normal text-lg text-start min-w-56 ">
                 Name of the event
@@ -131,19 +134,19 @@ export const Modal = ({ open, isEdit, eventId, onClose }: propsType) => {
                 Event Date
               </p>
               <input
-                className="border-2 border-black rounded-md p-2 w-56"
+                className="border-2 text-black border-black rounded-md p-2 w-56"
                 ref={dateRef}
                 type="date"
               />
               <button
-                className="border-2 bg-purple-500 rounded-lg p-2 text-white-400"
+                className="border-2 bg-red-600 w-44 rounded-lg p-2 text-white active:scale-95 hover:bg-red-700 transition-all"
                 onClick={() => {
                   // Send data to Backend
                   sendData();
                   console.log("Helowklj");
                 }}
               >
-                Save
+                {isEdit ? "Update" : "Add"}
               </button>
             </div>
           </div>

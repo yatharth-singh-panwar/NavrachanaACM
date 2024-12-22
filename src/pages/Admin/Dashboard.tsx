@@ -5,8 +5,11 @@ import { Modal } from "@/components/Modal";
 import { useEffect, useState } from "react";
 import { EventDetails } from "@/components/EventDetails";
 import axios from "axios";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern.tsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const [model, setModel] = useState(false);
   const [events, setEvents] = useState([]);
 
@@ -27,6 +30,10 @@ export default function Dashboard() {
   }
   useEffect(() => {
     //axios fetch to get all the events
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/admin/login");
+    }
     getEvents();
 
     return () => {
@@ -36,6 +43,15 @@ export default function Dashboard() {
 
   return (
     <>
+      <div className="absolute -z-30 w-full h-screen">
+        <AnimatedGridPattern
+          repeatDelay={2}
+          width={100}
+          height={100}
+          numSquares={5}
+          className=""
+        />
+      </div>
       <Modal
         open={model}
         isEdit={false}
@@ -43,18 +59,18 @@ export default function Dashboard() {
           setModel(false);
         }}
       />
-      <div className="bg-white w-full h-screen">
+      <div className="w-full h-screen">
         <div className="flex row">
           <div className="w-full p-6">
-            <div className="bg-[#F8FBFD]">
-              <div className="flex justify-between p-2">
+            <div className="text-white">
+              <div className="flex justify-between font-aleo p-2">
                 <h1 className="text-xl font-bold content-center">
                   Welcome Admin
                 </h1>
                 <div className="flex justify-end gap-5 content-center">
                   <Button
                     startIcon={<PlusIcon />}
-                    variant="primary"
+                    variant="secondary"
                     size="md"
                     text="Add new Event"
                     onClick={() => {
@@ -63,7 +79,7 @@ export default function Dashboard() {
                   ></Button>
                 </div>
               </div>
-              <div className="content flex">
+              <div className="content flex gap-5 flex-wrap">
                 {events.map((event: any) => {
                   console.log(event._id);
                   return (
@@ -73,6 +89,8 @@ export default function Dashboard() {
                       Heading={event.name}
                       Description={event.desc}
                       Image={event.photoLink}
+                      formLink={event.registrationLink}
+                      qrLink={event.qrLink}
                       events={events}
                       setEvents={setEvents}
                     />
