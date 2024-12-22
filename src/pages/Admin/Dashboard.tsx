@@ -1,5 +1,4 @@
 import { Button } from "@/components/Button";
-import { Edit2, Trash2 } from "lucide-react";
 import { BACKEND_URL } from "../../../config.ts";
 import { PlusIcon } from "lucide-react";
 import { Modal } from "@/components/Modal";
@@ -39,6 +38,7 @@ export default function Dashboard() {
     <>
       <Modal
         open={model}
+        isEdit={false}
         onClose={() => {
           setModel(false);
         }}
@@ -65,11 +65,14 @@ export default function Dashboard() {
               </div>
               <div className="content flex">
                 {events.map((event: any) => {
+                  console.log(event._id);
                   return (
                     <EventDetails
                       isAdmin={true}
+                      eventId={event._id}
                       Heading={event.name}
                       Description={event.desc}
+                      Image={event.photoLink}
                       events={events}
                       setEvents={setEvents}
                     />
