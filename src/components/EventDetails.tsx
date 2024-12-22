@@ -12,6 +12,7 @@ interface EventDetailsProps {
   Heading: string;
   Description: string;
   formLink?: string;
+  qrLink?: string;
   Image?: string;
   events: any;
   setEvents: (e: any) => void;
@@ -55,8 +56,8 @@ export const EventDetails = (props: EventDetailsProps) => {
           }}
         />
       )}
-      <div className="bg-white w-80 h-96">
-        <MagicCard className="p-5">
+      <div className="w-80 font-aleo">
+        <MagicCard className="p-5 justify-center">
           <div className="child">
             <img
               className="rounded-lg w-full h-40 object-cover"
@@ -66,14 +67,40 @@ export const EventDetails = (props: EventDetailsProps) => {
                   : "https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
               }
             ></img>
-            <div className="m-2 Event Heading text-center w-full font-bold text-2xl font-sans">
+            <div className="m-2 Event Heading text-center w-full font-bold text-2xl">
               {props.Heading}
             </div>
             <div className=" max-h-60 text-sm mb-0 text-justify  text-wrap">
               <p>{props.Description}</p>
+              {props.isAdmin && (
+                <div>
+                  <div>
+                    Registration Link:{" "}
+                    <a
+                      className="text-blue-600 underline"
+                      target="_blank"
+                      href={props.formLink}
+                    >
+                      {" "}
+                      {props.formLink}
+                    </a>
+                  </div>
+                  <div>
+                    QR Link:{" "}
+                    <a
+                      className="text-blue-600 underline"
+                      target="_blank"
+                      href={props.qrLink}
+                    >
+                      {" "}
+                      {props.qrLink}
+                    </a>
+                  </div>
+                </div>
+              )}
             </div>
             {props.isAdmin && (
-              <div className="flex justify-between">
+              <div className="pt-5 flex gap-4">
                 <Button
                   startIcon={<Edit2 size={20} />}
                   variant="tertiary"
