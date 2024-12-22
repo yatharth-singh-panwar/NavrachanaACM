@@ -1,5 +1,4 @@
 import { Button } from "@/components/Button";
-import { Edit2, Trash2 } from "lucide-react";
 import { BACKEND_URL } from "../../../config.ts";
 import { PlusIcon } from "lucide-react";
 import { Modal } from "@/components/Modal";
