@@ -70,7 +70,7 @@ export const EventDetails = (props: EventDetailsProps) => {
             <div className="m-2 Event Heading text-center w-full font-bold text-2xl">
               {props.Heading}
             </div>
-            <div className=" max-h-60 text-sm mb-0 text-justify  text-wrap">
+            <div className="max-h-60 text-sm mb-0 text-center text-wrap">
               <p>{props.Description}</p>
               {props.isAdmin && (
                 <div>
@@ -118,11 +118,14 @@ export const EventDetails = (props: EventDetailsProps) => {
               </div>
             )}
             {!props.isAdmin && (
-              <div className="w-full flex items-center justify-center">
+              <div className="pt-5 w-full flex items-center justify-center">
                 <Button
                   variant="secondary"
                   size="md"
                   text="Register Now!"
+                  onClick={() => {
+                    window.open(props.formLink, "_blank");
+                  }}
                 ></Button>
               </div>
             )}
