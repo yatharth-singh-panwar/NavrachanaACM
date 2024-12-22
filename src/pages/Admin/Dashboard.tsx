@@ -6,8 +6,10 @@ import { useEffect, useState } from "react";
 import { EventDetails } from "@/components/EventDetails";
 import axios from "axios";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern.tsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   const [model, setModel] = useState(false);
   const [events, setEvents] = useState([]);
 
@@ -28,6 +30,10 @@ export default function Dashboard() {
   }
   useEffect(() => {
     //axios fetch to get all the events
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/admin/login");
+    }
     getEvents();
 
     return () => {
