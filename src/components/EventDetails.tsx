@@ -6,9 +6,10 @@ import { BACKEND_URL } from "../../config";
 
 interface EventDetailsProps {
   isAdmin: Boolean;
-  Heading: String;
-  Description: String;
-  formLink?: String;
+  Heading: string;
+  Description: string;
+  formLink?: string;
+  Image?: string;
   events: any;
   setEvents: (e: any) => void;
 }
@@ -41,9 +42,12 @@ export const EventDetails = (props: EventDetailsProps) => {
       <MagicCard className="p-5">
         <div className="child">
           <img
-            className="rounded-lg"
-            width={300}
-            src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+            className="rounded-lg w-full h-40 object-cover"
+            src={
+              props.Image
+                ? props.Image
+                : "https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75"
+            }
           ></img>
           <div className="m-2 Event Heading text-center w-full font-bold text-2xl font-sans">
             {props.Heading}

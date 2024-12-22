@@ -1,10 +1,51 @@
+import { useRef } from "react";
 import { CloseButton } from "./CloseButton";
+import { BACKEND_URL } from "../../config";
+import axios from "axios";
 
 interface propsType {
   open: boolean;
   onClose: () => void;
 }
 export const Modal = ({ open, onClose }: propsType) => {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const descriptionRef = useRef<HTMLInputElement>(null);
+  const imageRef = useRef<HTMLInputElement>(null);
+  const qrCodeRef = useRef<HTMLInputElement>(null);
+  const registrationFormRef = useRef<HTMLInputElement>(null);
+  const dateRef = useRef<HTMLInputElement>(null);
+
+  async function sendData() {
+    try {
+      if (
+        nameRef.current?.value === "" ||
+        descriptionRef.current?.value === "" ||
+        imageRef.current?.value === "" ||
+        qrCodeRef.current?.value === "" ||
+        registrationFormRef.current?.value === "" ||
+        dateRef.current?.value === ""
+      ) {
+        alert("Please fill all the fields");
+        return;
+      }
+
+      await axios.post(`${BACKEND_URL}admin/dashboard/Event/`, {
+        name: nameRef.current?.value,
+        description: descriptionRef.current?.value,
+        photoLink: imageRef.current?.value,
+        qrLink: qrCodeRef.current?.value,
+        registrationLink: registrationFormRef.current?.value,
+        date: dateRef.current?.value,
+      });
+
+      alert("Event Added Successfully");
+      onClose();
+    } catch (e) {
+      alert("Error occurred while trying to add event. Check console!");
+      console.log(e);
+    }
+  }
+
   return (
     <>
       {open && (
@@ -17,25 +58,28 @@ export const Modal = ({ open, onClose }: propsType) => {
               >
                 <CloseButton />
               </div>
-              <p className="font-normal text-lg text-center min-w-full ">
-                Enter your name of the event
+              <p className="font-normal text-lg text-start min-w-56 ">
+                Name of the event
               </p>
               <input
                 className="border-2 border-black rounded-md p-2 w-56"
+                ref={nameRef}
                 type="text"
               />
-              <p className="font-normal text-lg  text-start max-w-56">
-                Enter a SHORT description of the event
+              <p className="font-normal text-lg  text-start min-w-56">
+                Brief Description of the event
               </p>
               <input
                 className="border-2 border-black rounded-md p-2 w-56"
+                ref={descriptionRef}
                 type="text"
               />
-              <p className="font-normal text-lg  text-start max-w-56">
-                Enter the event IMAGE link
+              <p className="font-normal text-lg  text-start min-w-56">
+                Event Image Link
               </p>
               <input
                 className="border-2 border-black rounded-md p-2 w-56"
+                ref={imageRef}
                 type="text"
               />
               <p className="font-normal text-lg  text-start min-w-56">
@@ -43,18 +87,30 @@ export const Modal = ({ open, onClose }: propsType) => {
               </p>
               <input
                 className="border-2 border-black rounded-md p-2 w-56"
+                ref={qrCodeRef}
                 type="text"
               />
-              <p className="font-normal text-lg  text-start max-w-56">
-                Enter the registration FORM LINK
+              <p className="font-normal text-lg  text-start min-w-56">
+                Registration Form Link
               </p>
               <input
                 className="border-2 border-black rounded-md p-2 w-56"
+                ref={registrationFormRef}
                 type="text"
+              />
+              <p className="font-normal text-lg  text-start min-w-56">
+                Event Date
+              </p>
+              <input
+                className="border-2 border-black rounded-md p-2 w-56"
+                ref={dateRef}
+                type="date"
               />
               <button
                 className="border-2 bg-purple-500 rounded-lg p-2 text-white-400"
                 onClick={() => {
+                  // Send data to Backend
+                  sendData();
                   console.log("Helowklj");
                 }}
               >

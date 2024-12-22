@@ -69,6 +69,7 @@ export default function Dashboard() {
                       isAdmin={true}
                       Heading={event.name}
                       Description={event.desc}
+                      Image={event.photoLink}
                       events={events}
                       setEvents={setEvents}
                     />
