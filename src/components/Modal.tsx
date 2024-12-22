@@ -5,9 +5,11 @@ import axios from "axios";
 
 interface propsType {
   open: boolean;
+  isEdit: boolean;
+  eventId?: string;
   onClose: () => void;
 }
-export const Modal = ({ open, onClose }: propsType) => {
+export const Modal = ({ open, isEdit, eventId, onClose }: propsType) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const descriptionRef = useRef<HTMLInputElement>(null);
   const imageRef = useRef<HTMLInputElement>(null);
@@ -15,8 +17,10 @@ export const Modal = ({ open, onClose }: propsType) => {
   const registrationFormRef = useRef<HTMLInputElement>(null);
   const dateRef = useRef<HTMLInputElement>(null);
 
+  console.log("Event ID: " + eventId);
+
   async function sendData() {
-    try {
+    if (!isEdit) {
       if (
         nameRef.current?.value === "" ||
         descriptionRef.current?.value === "" ||
@@ -28,18 +32,43 @@ export const Modal = ({ open, onClose }: propsType) => {
         alert("Please fill all the fields");
         return;
       }
+    }
 
-      await axios.post(`${BACKEND_URL}admin/dashboard/Event/`, {
-        name: nameRef.current?.value,
-        description: descriptionRef.current?.value,
-        photoLink: imageRef.current?.value,
-        qrLink: qrCodeRef.current?.value,
-        registrationLink: registrationFormRef.current?.value,
-        date: dateRef.current?.value,
-      });
+    try {
+      if (isEdit) {
+        console.log("Editing Event: " + eventId);
+        const updateData: any = {};
+        if (nameRef.current?.value) updateData.name = nameRef.current?.value;
+        if (descriptionRef.current?.value)
+          updateData.description = descriptionRef.current?.value;
+        if (imageRef.current?.value)
+          updateData.photoLink = imageRef.current?.value;
+        if (qrCodeRef.current?.value)
+          updateData.qrLink = qrCodeRef.current?.value;
+        if (registrationFormRef.current?.value)
+          updateData.registrationLink = registrationFormRef.current?.value;
+        if (dateRef.current?.value) updateData.date = dateRef.current?.value;
 
-      alert("Event Added Successfully");
-      onClose();
+        await axios.put(`${BACKEND_URL}admin/dashboard/editEvent/`, {
+          id: eventId,
+          ...updateData,
+        });
+        alert("Event Updated Successfully. Reload the page to see changes");
+        onClose();
+        return;
+      } else {
+        await axios.post(`${BACKEND_URL}admin/dashboard/Event/`, {
+          name: nameRef.current?.value,
+          description: descriptionRef.current?.value,
+          photoLink: imageRef.current?.value,
+          qrLink: qrCodeRef.current?.value,
+          registrationLink: registrationFormRef.current?.value,
+          date: dateRef.current?.value,
+        });
+
+        alert("Event Added Successfully. Reload the page to see changes");
+        onClose();
+      }
     } catch (e) {
       alert("Error occurred while trying to add event. Check console!");
       console.log(e);

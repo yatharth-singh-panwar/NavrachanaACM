@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
 import { stringify } from "querystring";
 import cors from "cors";
+import { Types } from "mongoose";
 dotenv.config();
 
 const mongoURI = process.env.MONGOURI;
@@ -117,7 +118,7 @@ app.get("/admin/dashboard/Event", async (req, res) => {
 app.put("/admin/dashboard/editEvent", async (req, res) => {
   const { id, name, description, date, qrLink, photoLink, registrationLink } =
     req.body;
-  const eventToEdit = await EventModel.findOne({ _id: id });
+  const eventToEdit = await EventModel.findOne({ _id: new Types.ObjectId(id) });
   console.log(eventToEdit);
   if (!eventToEdit) {
     res.status(404).send({
