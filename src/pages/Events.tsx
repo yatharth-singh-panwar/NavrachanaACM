@@ -52,7 +52,7 @@ export default function Events() {
         </div>
         <Navbar />
       </div>
-      <div className="flex justify-center items-center text-4 text-white font-aleo h-96">
+      <div className="flex justify-center items-center text-4 text-white font-aleo">
         {events && (
           <div className="content flex gap-5 flex-wrap">
             {events.map((event: any) => {
