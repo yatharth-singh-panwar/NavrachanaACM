@@ -110,15 +110,10 @@ export function Landing() {
               <AnimatedBeamDemo />
             </div>
             <div className="text-white flex items-center max-w-3xl">
-              <p className="pl-9 text-2xl text-justify text-gray-300">
-                As part of the Navrachana University ACM Chapter, students can
-                access opportunities for academic, professional, and personal
-                growth. Aligned with ACM's global mission, the chapter offers
-                resources like the Digital Library, technical workshops,
-                hackathons, and networking events. With a focus on technical
-                excellence, lifelong learning, and inclusivity, we aim to
-                empower students to become leaders in computing and drive
-                positive change through technology.
+              <p className="pl-9 text-xl text-justify text-gray-300">
+              The ACM Student Chapter envisions fostering an inclusive, innovative, and collaborative environment where students can excel in the field of computing and technology. Our chapter serves as a bridge between academic learning and professional excellence, empowering students to explore emerging trends, contribute to impactful projects, and develop problem-solving skills essential for the challenges of tomorrow.
+              Through workshops, hackathons, guest lectures, and collaborative research opportunities, we aim to inspire curiosity and nurture talent. By cultivating a vibrant community, we strive to promote diversity, encourage interdisciplinary collaboration, and ignite a passion for lifelong learning in the ever-evolving landscape of computing.
+              Together, we are building a foundation where the students of today become the thought leaders, innovators, and change-makers of the future.
               </p>
             </div>
           </div>
