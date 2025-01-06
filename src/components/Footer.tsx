@@ -1,4 +1,4 @@
-import { WhatsApp } from "@/icons/Whatsapp";
+import { WhatsApp } from "@/components/Whatsapp";
 import BlurredInComponent from "./BlurIn";
 import FlickeringGrid from "./ui/flickering-grid";
 import { Github, Linkedin } from "lucide-react";

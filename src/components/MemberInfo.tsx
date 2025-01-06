@@ -1,5 +1,5 @@
-import {TwitterLogo} from "../icons/Twitter";
-import { LinkedInIcon } from "@/icons/LinkedIn";
+import {TwitterLogo} from "./Twitter";
+import { LinkedInIcon } from "@/components/LinkedIn";
 import { MagicCard } from "./ui/magic-card";
 import { useState } from "react";
 interface information{

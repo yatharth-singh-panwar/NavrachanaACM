@@ -9,7 +9,7 @@ import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import NumberTicker from "@/components/ui/number-ticker";
 import Particles from "@/components/ui/particles";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/FrameFinal.png";
+
 export function Landing() {
  
   // const images = [
@@ -38,7 +38,7 @@ export function Landing() {
     <div className="logo bg-black">
       <img 
       className="rounded-2xl"
-      src={logo}
+      src="/assets/FrameFinal.png"
       height={400}
       width={500}
       />
@@ -73,7 +73,7 @@ export function Landing() {
             <div className="w-60 bg-red-600 rounded-xl p-2 flex flex-col justify-between">
             <div className="flex items-center justify-center w-full p-5">
               <div>
-                <img src="src/assets/LandingPageAssets/CareerAdvancement.svg" width={120}></img>
+                <img src="/assets/LandingPageAssets/CareerAdvancement.svg" width={120}></img>
               </div>
             </div>
             <div className="flex text-yellow-300 items-center justify-center font-bold text-xl">
@@ -85,7 +85,7 @@ export function Landing() {
             </div>
           <div className="w-60 bg-red-600 rounded-xl">
             <div className="flex items-center justify-center w-full p-5">
-              <img src="src/assets/LandingPageAssets/Leadership.svg" width={120}></img>
+              <img src="/assets/LandingPageAssets/Leadership.svg" width={120}></img>
             </div>
             <div className="font-bold text-yellow-300 flex items-center justify-center text-xl">
               Leadership
@@ -99,7 +99,7 @@ export function Landing() {
         <div className="flex items-center justify-center gap-14 w-full  p-2 mb-5">
         <div className="w-60  bg-red-600 rounded-xl gap-2">
           <div className="flex items-center justify-center w-full p-5">
-            <img src="src/assets/LandingPageAssets/Networking.svg " width={120}></img>
+            <img src="/assets/LandingPageAssets/Networking.svg " width={120}></img>
           </div>
           <div className="text-yellow-300 font-bold flex items-center justify-center text-l">
               Networking Opportunities
@@ -110,7 +110,7 @@ export function Landing() {
         </div>
           <div className="w-60  bg-red-600 rounded-xl">
             <div className="flex items-center justify-center w-full p-5">
-              <img src="src/assets/LandingPageAssets/ProffesionalDevelopment.svg" width={120}></img>
+              <img src="/assets/LandingPageAssets/ProffesionalDevelopment.svg" width={120}></img>
             </div>
                  <div className="mt-2 text-yellow-300 font-bold flex items-center justify-center text-xl">
               Research Opportunities
@@ -121,7 +121,7 @@ export function Landing() {
           </div>
           <div className="w-60 bg-red-600 rounded-xl">
             <div className="flex items-center justify-center w-full p-5">
-              <img src="src/assets/LandingPageAssets/Skills.svg" width={80}></img>
+              <img src="/assets/LandingPageAssets/Skills.svg" width={80}></img>
             </div>
               <div className="flex items-center text-yellow-300 font-bold justify-center text-xl">
                 Skill Advancement

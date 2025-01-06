@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import AnimatedGridPattern from "../components/ui/animated-grid-pattern";
-import logo from "@/assets/FrameFinal.png";
 import WordPullUp from "../components/ui/word-pull-up";
 import { Footer } from "../components/Footer";
 import axios from "axios";
@@ -48,7 +47,7 @@ export default function Events() {
       </div>
       <div className="z-50 flex items-center justify-between h-28 bg-black mb-10">
         <div className="logo bg-black">
-          <img className="rounded-2xl" src={logo} width={100} />
+          <img className="rounded-2xl" src="/assets/FrameFinal.png" height={400} width={500}/>
         </div>
         <Navbar />
       </div>
