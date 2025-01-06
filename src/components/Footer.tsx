@@ -18,7 +18,7 @@ export function Footer() {
           maxOpacity={0.5}
           flickerChance={0.1}
         />
-        <BlurredInComponent word="NUV ACM" />
+        <BlurredInComponent isFooter={true} word="NUV ACM" />
         <div className="links z-50 flex mt-2 gap-4">
           <a href="#">Home</a>
           <a href="#">About</a>

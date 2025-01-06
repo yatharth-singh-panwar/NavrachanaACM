@@ -9,30 +9,30 @@ function Navbar() {
         <nav className="flex space-x-4 w-full justify-center gap-0">
           <a
             href="/"
-            className="w-full m-0 hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs"
+            className="w-full m-0 hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs group"
           >
             <div>
               <Home size={20}/>
             </div>
-            <div>Home</div>
+            <div className="hidden group-hover:block">Home</div>
           </a>
           <a
             href="/Team"
-            className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs"
+            className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs group"
           >
             <div>
               <Users size={20}/>
             </div>
-            <div>The Team</div>
+            <div className="hidden group-hover:block">The Team</div>
           </a>
           <a
             href="/Events"
-            className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs"
+            className="w-full hover:text-red-600 ease-out duration-200 cursor-pointer flex flex-col justify-center items-center gap-2 text-xs group"
           >
             <div>
               <Calendar size={20}/>
             </div>
-            <div>Events</div>
+            <div className="hidden group-hover:block">Events</div>
           </a>
         </nav>
       </div>

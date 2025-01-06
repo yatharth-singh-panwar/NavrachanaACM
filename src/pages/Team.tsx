@@ -2,14 +2,14 @@ import { MemberInfo } from "@/components/MemberInfo";
 import Navbar from "@/components/Navbar";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import WordFadeIn from "@/components/ui/word-fade-in";
-import Travon from "@/icons/Travon.jpeg";
+import Travon from "@/icons/TravonFinal.png";
 import Dharminf from "@/icons/dharminFinal.png";
-import Ray from "@/icons/RayFinal.png";
+import Ray from "@/icons/rayFinalFinal.png";
 import Amaan from "@/icons/Amaan-removebg-preview.png";
 import Jaideep from "@/icons/JaideepRaulji.png";
 import ashish from "@/icons/AshishJani.png";
 import { Footer } from "@/components/Footer";
-import logo from "@/assets/LOGOFINAL.png";
+import logo from "@/assets/FrameFinal.png";
 import yatharth from "@/icons/yatharthFinal2.png";
 export function Team() {
   return (
@@ -23,7 +23,7 @@ export function Team() {
           className=""
         />
       </div>
-      <div className="z-50 flex items-center justify-between h-24 bg-black bg-opacity-60 mb-10">
+      <div className="z-50 flex items-center justify-between h-28 bg-black  mb-10">
         <div className="logo bg-black">
           <img 
             className="rounded-2xl"
@@ -34,10 +34,10 @@ export function Team() {
         </div>
         <Navbar />
       </div>
-      <div className="w-full flex justify-center text-white p-10">
+      <div className="w-full flex justify-center text-black p-10">
         <WordFadeIn
           words="MEET THE BRAINS"
-          className="text-white"
+          className="text-black"
           delay={0.7}
         />
       </div>
@@ -87,15 +87,15 @@ export function Team() {
 
         <MemberInfo
           name="Dr. Jaideep Raulji"
-          position="Faculty Sponsor"
+          position="Advisor Faculty"
           linkedInProfileUrl="https://www.linkedin.com/in/jaideepsinhraulji/?originalSubdomain=in"
           TwitterProfileUrl=""
           imageUrl={Jaideep}
         />
 
         <MemberInfo
-          name="Ashish Jani"
-          position="Faculty Sponsor"
+          name="Dr. Ashish Jani"
+          position="Advisor Faculty"
           linkedInProfileUrl="https://www.linkedin.com/in/ashish-jani/"
           TwitterProfileUrl=""
           imageUrl={ashish}

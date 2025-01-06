@@ -102,6 +102,7 @@ app.delete("/admin/dashboard/Event", async (req, res) => {
 app.get("/admin/dashboard/Event", async (req, res) => {
   try {
     const allEvents = await EventModel.find({});
+    console.log(allEvents);
     res.status(200).send({
       allEvents: allEvents,
     });
@@ -150,5 +151,6 @@ app.put("/admin/dashboard/editEvent", async (req, res) => {
 });
 
 app.listen(3000, () => {
+  console.log("Connection string is", process.env.MONGOURI);
   console.log("Listening on port 3000");
 });

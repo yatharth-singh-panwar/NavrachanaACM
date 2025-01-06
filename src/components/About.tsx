@@ -13,7 +13,7 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 black",
         className,
       )}
     >
@@ -41,29 +41,29 @@ export function AnimatedBeamDemo() {
     >
       <div className="flex size-full flex-col max-w-lg max-h-[200px] items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
-          <Circle className="border-white  border-2 "ref={div1Ref}>
+          <Circle className="border-black  border-2 "ref={div1Ref}>
             <Icons.googleDrive />
           </Circle>
-          <Circle ref={div5Ref} className="border-white ">
+          <Circle ref={div5Ref} className="border-black ">
             <Icons.googleDocs />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <Circle ref={div2Ref} className="border-white ">
+          <Circle ref={div2Ref} className="border-black ">
             <Icons.notion />
           </Circle>
-          <Circle ref={div4Ref} className="size-16 border-white " >
+          <Circle ref={div4Ref} className="size-16 border-black " >
             <h1 className="text-black font-extrabold">ACM</h1>
           </Circle>
-          <Circle ref={div6Ref} className="border-white ">
+          <Circle ref={div6Ref} className="border-black ">
             <Icons.zapier />
           </Circle>
         </div>
         <div className="flex flex-row items-center justify-between">
-          <Circle ref={div3Ref} className="border-white ">
+          <Circle ref={div3Ref} className="border-black ">
             <Icons.whatsapp />
           </Circle>
-          <Circle ref={div7Ref} className="border-white ">
+          <Circle ref={div7Ref} className="border-black ">
             <Icons.messenger />
           </Circle>
         </div>
@@ -74,6 +74,9 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div1Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         curvature={-75}
         endYOffset={-10}
         reverse
@@ -82,6 +85,9 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div2Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         reverse
       />  
       
@@ -89,6 +95,9 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div3Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         curvature={75}
         endYOffset={10}
         reverse
@@ -97,6 +106,9 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div5Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         curvature={-75}
         endYOffset={-10}
         
@@ -105,12 +117,18 @@ export function AnimatedBeamDemo() {
         containerRef={containerRef}
         fromRef={div6Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         
       />
       <AnimatedBeam
         containerRef={containerRef}
         fromRef={div7Ref}
         toRef={div4Ref}
+        pathColor="black"
+        gradientStartColor="red"
+        gradientStopColor="red"
         curvature={75}
         endYOffset={10}
         

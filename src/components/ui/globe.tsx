@@ -10,15 +10,15 @@ const GLOBE_CONFIG: COBEOptions = {
   height: 100,
   onRender: () => {},
   devicePixelRatio: 2,
-  phi: 2,
+  phi: 0,
   theta: 0.2,
-  dark: 0.8,
+  dark: 0,
   diffuse: 0,
-  mapSamples: 60000,
-  mapBrightness: 5,
-  baseColor: [2, 1, 1],
-  markerColor: [251 / 255, 100 / 255, 21 / 255],
-  glowColor: [2, 1, 1],
+  mapSamples: 20000,
+  mapBrightness: 500,
+  baseColor: [0.200, 0.200, 0.690], 
+  markerColor: [1, 1, 0], // Yellow
+  glowColor: [0.200, 0.200  , 0.690],
   markers: [
     { location: [14.5995, 120.9842], size: 0.03 },
     { location: [19.076, 72.8777], size: 0.1 },
@@ -64,7 +64,7 @@ export function Globe({
  
   const onRender = useCallback(
     (state: Record<string, any>) => {
-      if (!pointerInteracting.current) phi += 0.005;
+      if (!pointerInteracting.current) phi += 0.01; // Increased speed
       state.phi = phi + r;
       state.width = width * 2;
       state.height = width * 2;

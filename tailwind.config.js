@@ -20,7 +20,8 @@ export default {
     			aleo: [
     				'Aleo',
     				'serif'
-    			]
+    			],
+				lobster: ['Lobster', 'cursive']
     		},
     		borderRadius: {
     			lg: 'var(--radius)',

@@ -3,6 +3,7 @@ import BlurIn from "./ui/blur-in";
 interface wordToDisplay{
   word : string
   size?: number
+  isFooter: boolean
 }
 const useOnScreen = (ref: React.RefObject<HTMLElement>) => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -15,7 +16,7 @@ const useOnScreen = (ref: React.RefObject<HTMLElement>) => {
     if (ref.current) {
       observer.observe(ref.current);
     }
-
+  
     return () => {
       if (ref.current) {
         observer.unobserve(ref.current);
@@ -31,7 +32,7 @@ const BlurredInComponent = (props: wordToDisplay) => {
   const isVisible = useOnScreen(ref);
 
   return (
-    <div ref={ref} className={`h-16 text-white ${props.size ? `text-[${props.size}px]` : ""} ${!props.size ? "" : ""}`}>
+    <div ref={ref} className={`${props.isFooter ? 'text-white' : "text-black"} h-16 ${props.size ? `text-[${props.size}px]` : ""} ${!props.size ? "" : ""}`}>
       {isVisible && <BlurIn word={props.word}/>}
     </div>
   );

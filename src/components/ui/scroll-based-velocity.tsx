@@ -32,7 +32,7 @@ export const wrap = (min: number, max: number, v: number) => {
 
 export function VelocityScroll({
   text,
-  default_velocity = 5,
+  default_velocity = 1,
   className,
 }: VelocityScrollProps) {
   function ParallaxText({
@@ -75,7 +75,7 @@ export function VelocityScroll({
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
     const directionFactor = React.useRef<number>(1);
-    useAnimationFrame((t, delta) => {
+    useAnimationFrame((delta) => {
       let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
       if (velocityFactor.get() < 0) {

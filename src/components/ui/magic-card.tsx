@@ -15,7 +15,7 @@ export function MagicCard({
   children,
   className,
   gradientSize = 200,
-  gradientColor = "#262626",
+  gradientColor = "white",
   gradientOpacity = 0.8,
 }: MagicCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -73,7 +73,7 @@ export function MagicCard({
     <div
       ref={cardRef}
       className={cn(
-        "group relative flex size-full overflow-hidden rounded-xl bg-[#0a0a0d] border text-white",
+        "group relative flex size-full overflow-hidden rounded-xl bg-red-700 border text-white",
         className,
       )}
     >
