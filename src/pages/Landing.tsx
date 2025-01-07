@@ -48,7 +48,7 @@ export function Landing() {
     <div >
     <div className="flex items-start pt-0 mb-16">
       <div className="-z-20 w-1/2  min-h-64 items-center justify-center ml-10">
-      <div className="ml-1 mt-24 pl-2 text-black text-2xl text-start font-aleo font-bold">
+      <div className="ml-1 mt-24 pl-2 text-black text-2xl text-start font-aleo font-bold whitespace-nowrap">
         EMPOWER YOUR FUTURE WITH
       </div>
       <WordPullUp
