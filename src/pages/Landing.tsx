@@ -48,18 +48,18 @@ export function Landing() {
     <div >
     <div className="flex items-start pt-0 mb-16">
       <div className="-z-20 w-1/2  min-h-64 items-center justify-center ml-10">
-      <div className="ml-1 mt-24 pl-0 text-black text-3xl text-start font-aleo font-bold">
+      <div className="ml-1 mt-24 pl-2 text-black text-2xl text-start font-aleo font-bold">
         EMPOWER YOUR FUTURE WITH
       </div>
       <WordPullUp
         words="NUV ACM"
-        className="text-red-600 font-bold p-2 font-aleo text-8xl text-start"
+        className="text-red-600 font-bold p-2 font-aleo text-8xl text-start whitespace-nowrap"
       />
       <SparklesText
-        className="z-50 font-bold absolute top-48 text-transparent text-9xl text-start"
+        className="z-50 font-bold absolute top-48 text-transparent text-8xl sm:text-6xl text-start whitespace-nowrap"
         text="NUV ACM"
       />
-      <div className="text-black w-5/6 font-aleo text-justify text-lg font-bold">
+      <div className="text-black w-5/6 font-aleo text-justify text-l font-bold">
       <p><span className="text-bold text-red-600 ">Navrachana University</span>, established in July 2009 in Vadodara, Gujarat, is a premier private institution accredited with an 'A' grade by NAAC. It offers a holistic, interdisciplinary curriculum emphasizing real-world application. The university houses five schools: Science, Engineering & Technology, Business & Law, Environmental Design & Architecture, and Liberal Studies & Education, on a modern campus.</p>
       <div className="h-2"></div>
       <p>
@@ -67,9 +67,9 @@ export function Landing() {
       </p>
       </div>
       </div>
-      <div className="w-9/12">
+      <div className="w-4/6">
       <div className="text-3xl text-center font-bold mb-4">BENIFITS OFFERED BY NUV ACM</div>
-        <div className="flex justify-center gap-14 w-full mb-5">
+        <div className="flex justify-center gap-12 w-11/12 mb-5">
             <div className="w-60 bg-red-600 rounded-xl p-2 flex flex-col justify-between">
             <div className="flex items-center justify-center w-full p-5">
               <div>
